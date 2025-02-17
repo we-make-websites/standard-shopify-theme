@@ -1,0 +1,19 @@
+[environments.dev]
+  theme = "1234567890"
+  store = "STORE_URL"
+  password  = "THEME_ACCESS_TOKEN"
+
+[environments.development]
+  theme = "133088968841"
+  store = "STORE_URL"
+  password  = "THEME_ACCESS_TOKEN"
+
+[environments.staging]
+  theme = "133088968841"
+  store = "STORE_URL"
+  password  = "THEME_ACCESS_TOKEN"
+
+[environments.live]
+  theme = "133088968841"
+  store = "STORE_URL"
+  password  = "THEME_ACCESS_TOKEN"

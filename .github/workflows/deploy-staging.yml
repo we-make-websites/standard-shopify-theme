@@ -1,0 +1,21 @@
+# Deploy to Staging theme on push
+name: Deploy to Staging
+on:
+  push:
+    branches:
+      - staging
+jobs:
+  deploy:
+    name: Deploy to STAGING (Project)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Shopify
+        uses: pgrimaud/action-shopify@master
+        env:
+          SHOPIFY_PASSWORD: ${{ secrets.SHOPIFY_PASSWORD }}
+          SHOPIFY_STORE_URL: ${{ vars.STORE_URL }}
+          SHOPIFY_THEME_ID: ${{ vars.STAGING_THEME_ID }}
+          THEME_PATH: ./
+        with:
+          args: --ignored-file=config/settings_data.json --ignored-file=locales/*.json --ignored-file=sections/*.json --ignored-file=templates/*.json --ignored-file=templates/customers/*.json --ignored-file=templates/metaobject/*.json

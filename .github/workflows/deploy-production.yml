@@ -1,0 +1,20 @@
+# Manually Deploy to Production
+# - Must be run on the `main`/`master` branch only
+name: Deploy to Production
+on: workflow_dispatch
+jobs:
+  deploy-uk:
+    name: Deploy to PRODUCTION (Project)
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Shopify
+        uses: pgrimaud/action-shopify@master
+        env:
+          SHOPIFY_PASSWORD: ${{ secrets.SHOPIFY_PASSWORD }}
+          SHOPIFY_STORE_URL: ${{ vars.STORE_URL }}
+          SHOPIFY_THEME_ID: ${{ vars.PRODUCTION_THEME_ID }}
+          THEME_PATH: ./
+        with:
+          args: --ignored-file=config/settings_data.json --ignored-file=locales/*.json --ignored-file=sections/*.json --ignored-file=templates/*.json --ignored-file=templates/customers/*.json --ignored-file=templates/metaobject/*.json
