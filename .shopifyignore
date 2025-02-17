@@ -1,0 +1,6 @@
+# This file is not used in workflows
+sections/*.json
+settings_data.json
+templates/*.json
+templates/customers/*.json
+templates/metaobject/*.json

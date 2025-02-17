@@ -1,43 +1,36 @@
-### PR Summary: 
+# What are you trying to accomplish with this PR?
 
-<!-- Please include a short description (using non-technical terms, 1-2 sentences) about the changes you are introducing, what problem is being fixed and/or describe the benefit to merchants. This content will be used in our release notes for Dawn on [themes.shopify.com](https://themes.shopify.com/themes/dawn/styles/default#ReleaseNotes). -->
+<!--
+Provide a detailed description of the objective of this pull request.
+Are you fixing a bug? Are you adding a new requested feature?
+Use the appropriate PR labels.
+-->
 
+**Task:** <!-- Jira task ID, e.g. DAWN-123 -->
 
-### Why are these changes introduced?
+# Checklist
+For contributors (tick when done):
 
-Fixes #0.
+## Testing
 
-### What approach did you take?
+### Priority
+- [ ] Chrome, desktop
+- [ ] Safari, iOS
+### Supplemental
+- [ ] Firefox, desktop
+- [ ] Safari, desktop
+- [ ] Chrome, Android
 
-### Other considerations
+## Accessibility
+- [ ] New elements have been tested in Lighthouse and/or an extension like [Axe](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
+- [ ] Elements can be navigated with keyboard controls
+- [ ] Elements are labelled and screen-reader compatible
 
-### Decision log
-
-| # | Decision | Alternatives | Rationale | Downsides |
-|---|---|---|---|---|
-| 1 |   |   |   |   |
-
-
-### Visual impact on existing themes
-<!-- How will this visually affect merchants who upgrade to a new theme version with this change? -->
-
-
-### Testing steps/scenarios
-<!-- List all the testing tasks that applies to your fix to help peers review your work. -->
-- [ ] Step 1
-
-### Demo links
-<!-- Please include a link to a demo store that includes preconfigured sections and settings to allow reviewers to easily test the features you are working on. -->
-
-- [Store](url)
-- [Editor](url)
-
-### Checklist
-- [ ] Added PR summary for [release notes](https://themes.shopify.com/themes/dawn/styles/default#ReleaseNotes)
-- [ ] Requested review from UX (Only for changes that are affecting the experience or perceivable visual details)
-- [ ] Created a ticket for the [help.shopify.com](https://help.shopify.com) documentation team about updates to theme settings. (Internal-only task)
-- [ ] Followed [theme code principles](https://github.com/Shopify/dawn/blob/main/.github/CONTRIBUTING.md#theme-code-principles)
-- [ ] Linted with [Theme Check](https://github.com/Shopify/theme-check)
-- [ ] Tested on [mobile](https://shopify.dev/themes/store/requirements#mobile-browser-requirements)
-- [ ] Tested on [multiple browsers](https://shopify.dev/themes/store/requirements#desktop-browser-requirements)
-- [ ] Tested for [accessibility](https://shopify.dev/themes/best-practices/accessibility)
+## Coding
+- [ ] Follows [coding guidelines](https://github.com/we-make-websites/wmw-coding-guidelines)
+- [ ] There are no eslint or stylelint linting errors
+- [ ] The code is logical and commented
+- [ ] Documentation has been updated to reflect the changes, if applicable
+- [ ] There are no hardcoded string values in Liquid
+- [ ] All new Liquid locale strings are added to each _shopify/locales/_ file
+- [ ] This work is inline with WCAG 2.1 AA standards
